@@ -38,21 +38,21 @@ if __name__ == "__main__":
     # favorite_columns = ['ID', 'AGE', 'GENDER', 'HYSTOPATHOLOGY', 'COMBO', 'DRUG', 'Reaction List PT (Duration – Outcome - Seriousness Criteria)']
     # print(df[['ID', 'Reaction List PT (Duration – Outcome - Seriousness Criteria)']].head(30))
 
-    print("Numero righe iniziali: ", get_n_rows(df))
+    # print("Numero righe iniziali: ", get_n_rows(df))
 
-    different_rows1 = (~df["HYSTOPATHOLOGY"].eq(df["DRUG"])).sum()
-    different_rows2 = df["ID"].isna().sum()
-    print("Righe vuote: ", different_rows1, different_rows2)
+    # different_rows1 = (~df["HYSTOPATHOLOGY"].eq(df["DRUG"])).sum()
+    # different_rows2 = df["ID"].isna().sum()
+    # print("Righe vuote: ", different_rows1, different_rows2)
     
     merged_df = merge_reactions(df)
-    print("Numero righe dopo merge: ", get_n_rows(merged_df))
+    # print("Numero righe dopo merge: ", get_n_rows(merged_df))
 
     merged_df["HYSTOPATHOLOGY"] = merged_df["HYSTOPATHOLOGY"].apply(extract_hystology)
     merged_df["DRUG"] = merged_df["DRUG"].apply(extract_drug)
 
-    print("Numero righe dopo extraction: ", get_n_rows(merged_df))
+    # print("Numero righe dopo extraction: ", get_n_rows(merged_df))
     
-    df.to_excel("output.excel")
+    merged_df.to_excel("output.xlsx")
 
 
 
