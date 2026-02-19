@@ -2,7 +2,7 @@ import pandas as pd
 import re
 import json
 
-class Engine:
+class Dataset:
     def __init__(self, input_dataset, output_dataset):
         self.input_dataset = input_dataset
         self.output_dataset = output_dataset
@@ -74,7 +74,7 @@ class Engine:
         return [p.strip() for p in pts]
 
     def extract_0vs1(self, pts_list: list):
-        return 1 if len(pts_list) > 0 else 0
+        return 1 if len(pts_list) > 1 else 0
 
     def map_pt_to_soc(self, pt: str):
         mask = self.pt_soc_df["Preferred Term"].astype(str).str.contains(pt, case=False, na=False)
@@ -183,25 +183,27 @@ class Engine:
 
 
 if __name__ == "__main__":
-    e = Engine("./dataset/B1 - Dataset 2025 (raw).xlsx", "output.xlsx")
+    d = Dataset("./dataset/A4 - Dataset 2024 (corretto + SOC categorizzate).xlsx", "output.xlsx")
+
+    d.run_set_0vs1_column()
     
     # ---------- RESET DELLE SOC ----------- #
-    # e.run_set_all_zero_SOC()
+    # d.run_set_all_zero_SOC()
     # -------------------------------------- #
 
     # ---------- CATEGORIZZAZIONE DELLE PT ----------- #
-    # e.run_map_pt()
+    # d.run_map_pt()
     # ------------------------------------------------ #
 
     # ---------- MERGE DELLE PT ----------- #
-    # e.run_merge_pts()
+    # d.run_merge_pts()
     # ------------------------------------- #
 
     # ---------- ESTRAZIONE DRUGS e HYSTOPATOLOGY ----------- #
-    # e.run_extract_drug()
-    # e.run_extract_hystopathology()
+    # d.run_extract_drug()
+    # d.run_extract_hystopathology()
     # ------------------------------------------------------- #
 
-    # e.save_dataset()
+    d.save_dataset()
 
     
