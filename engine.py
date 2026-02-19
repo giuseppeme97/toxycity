@@ -9,6 +9,8 @@ class Engine:
         self.main_df = pd.read_excel(self.input_dataset)
         self.pt_soc_df = pd.read_excel("map_pt_to_soc.xlsx")
         self.pts_column = 'Reaction List PT (Duration - Outcome - Seriousness Criteria)'
+        self.drugs_column = 'Suspect/interacting Drug List (Drug Char - Indication PT - Action taken - [Duration - Dose - Route])'
+        self.hystopathologies_column = 'HYSTOPATHOLOGY'
         
         with open('map_soc.json') as json_file:
             self.soc_categories = json.load(json_file)
@@ -104,13 +106,13 @@ class Engine:
         self.main_df[self.soc_columns] = 0
 
     def run_extract_drug(self):
-        self.main_df["DRUG"] = self.main_df["DRUG"].apply(self.extract_drugs)
+        self.main_df[self.drugs_column] = self.main_df[self.drugs_column].apply(self.extract_drugs)
 
     def run_map_drug(self):
         pass
 
     def run_extract_hystopathology(self):
-        self.main_df["HYSTOPATHOLOGY"] = self.main_df["HYSTOPATHOLOGY"].apply(self.extract_hystopathology)
+        self.main_df[self.hystopathologies_column] = self.main_df[self.hystopathologies_column].apply(self.extract_hystopathology)
 
     def run_map_hystopathology(self):
         pass
@@ -185,7 +187,7 @@ class Engine:
 
 
 if __name__ == "__main__":
-    e = Engine("./dataset/3 - Dataset 2024 (corretto + SOC zero).xlsx", "output.xlsx")
+    e = Engine("./dataset/B1 - Dataset 2025 (raw).xlsx", "output.xlsx")
     
     # ---------- RESET DELLE SOC ----------- #
     # e.run_set_all_zero_SOC()
@@ -196,12 +198,12 @@ if __name__ == "__main__":
     # ------------------------------------------------ #
 
     # ---------- MERGE DELLE PT ----------- #
-    # e.run_merge_pt()
+    e.run_merge_pts()
     # ------------------------------------- #
 
     # ---------- ESTRAZIONE DRUGS e HYSTOPATOLOGY ----------- #
-    # e.run_extract_drugs()
-    # e.run_extract_hystology()
+    e.run_extract_drugs()
+    e.run_extract_hystology()
     # ------------------------------------------------------- #
 
     e.save_dataset()
