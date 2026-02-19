@@ -11,6 +11,7 @@ class Engine:
         self.pts_column = 'Reaction List PT (Duration - Outcome - Seriousness Criteria)'
         self.drugs_column = 'Suspect/interacting Drug List (Drug Char - Indication PT - Action taken - [Duration - Dose - Route])'
         self.hystopathologies_column = 'HYSTOPATHOLOGY'
+        self.vs_column = '0 VS 1 TOXICITY'
         
         with open('map_soc.json') as json_file:
             self.soc_categories = json.load(json_file)
@@ -58,10 +59,7 @@ class Engine:
         return self.main_df.columns.tolist()
     
     def get_distinct_values(self, column_name):
-        if column_name in self.main_df.columns:
-            return self.main_df[column_name].dropna().unique().tolist()
-        else:
-            raise ValueError(f"Colonna non presente nel dataset.")
+        return self.main_df[column_name].dropna().unique().tolist()
 
     def extract_drugs(self, input_string: str):
         drugs = " - ".join(re.findall(r'\[([A-Z ,]+)\]', input_string))
@@ -72,20 +70,13 @@ class Engine:
         return hystopatology.group(1) if hystopatology else None
 
     def extract_pts(self, input_string: str):
-        pattern = r'\s*([^,(]+?)\s*\('
-        pts = re.findall(pattern, input_string)    
-        pts = [p.strip() for p in pts]
-        return pts
-    
-    def check_PT_to_SOC(self, pt: str):
-        mask = self.pt_soc_df["Preferred Term"].astype(str).str.contains(pt, case=False, na=False)
-        
-        if mask.any():
-            return True
-        else:
-            return None
+        pts = re.findall(r'\s*([^,(]+?)\s*\(', input_string)    
+        return [p.strip() for p in pts]
 
-    def map_PT_to_SOC(self, pt: str):
+    def extract_0vs1(self, pts_list: list):
+        return 1 if len(pts_list) > 0 else 0
+
+    def map_pt_to_soc(self, pt: str):
         mask = self.pt_soc_df["Preferred Term"].astype(str).str.contains(pt, case=False, na=False)
         
         if mask.any():
@@ -93,25 +84,25 @@ class Engine:
         else:
             return None
         
-    def map_SOC_to_colum(self, SOC: str):
-        if SOC in self.soc_categories:
-            return self.soc_categories[SOC]
+    def map_soc_to_colum(self, soc: str):
+        if soc in self.soc_categories:
+            return self.soc_categories[soc]
         else:
             return None
         
     def save_dataset(self):
         self.main_df.to_excel(self.output_dataset, index=False)
 
-    def run_set_all_zero_SOC(self):
+    def run_set_all_zero_soc_columns(self):
         self.main_df[self.soc_columns] = 0
 
-    def run_extract_drug(self):
+    def run_set_drug_column(self):
         self.main_df[self.drugs_column] = self.main_df[self.drugs_column].apply(self.extract_drugs)
 
     def run_map_drug(self):
         pass
 
-    def run_extract_hystopathology(self):
+    def run_set_hystopathology_column(self):
         self.main_df[self.hystopathologies_column] = self.main_df[self.hystopathologies_column].apply(self.extract_hystopathology)
 
     def run_map_hystopathology(self):
@@ -136,9 +127,9 @@ class Engine:
         for index, row in self.main_df.iterrows():
             pts = self.extract_pts(row[self.pts_column])
             for pt in pts:
-                soc = self.map_PT_to_SOC(pt)
+                soc = self.map_pt_to_soc(pt)
                 if soc:
-                    soc_column = self.map_SOC_to_colum(soc)
+                    soc_column = self.map_soc_to_colum(soc)
                     self.main_df.loc[index, soc_column] = 1
                     print(f"{index} - PT {pt} mappato a SOC {soc} e colonna {soc_column}.")
                 else:
@@ -149,13 +140,18 @@ class Engine:
         for _, row in self.main_df.iterrows():
             pts = self.extract_pts(row[self.pts_column])
             for pt in pts:
-                soc = self.check_PT_to_SOC(pt)
+                soc = self.map_pt_to_soc(pt)
                 if not soc:
                     orphans.append(pt)
                     print(f"PT {pt} non trovato nella mappatura.")
         return list(set(orphans))
+    
+    def run_set_0vs1_column(self):
+        for index, row in self.main_df.iterrows():
+            pts = self.extract_pts(row[self.pts_column])
+            self.main_df.loc[index, self.vs_column] = self.extract_0vs1(pts)
 
-    def run_delete_PT_column(self):
+    def run_delete_pt_column(self):
         pass
 
     def get_all_hystopathologies(self, elements):
@@ -177,7 +173,7 @@ class Engine:
         drugs = []
 
         for element in elements:
-            parts = element.split(' -')
+            parts = element.split(' - ')
             for part in parts:
                 drug = part.strip()
                 if drug: 
@@ -194,18 +190,18 @@ if __name__ == "__main__":
     # -------------------------------------- #
 
     # ---------- CATEGORIZZAZIONE DELLE PT ----------- #
-    e.run_map_pt()
+    # e.run_map_pt()
     # ------------------------------------------------ #
 
     # ---------- MERGE DELLE PT ----------- #
-    e.run_merge_pts()
+    # e.run_merge_pts()
     # ------------------------------------- #
 
     # ---------- ESTRAZIONE DRUGS e HYSTOPATOLOGY ----------- #
-    e.run_extract_drugs()
-    e.run_extract_hystology()
+    # e.run_extract_drug()
+    # e.run_extract_hystopathology()
     # ------------------------------------------------------- #
 
-    e.save_dataset()
+    # e.save_dataset()
 
     
