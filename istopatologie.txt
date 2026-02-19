@@ -1,0 +1,495 @@
+Renal cell carcinoma
+Bile duct cancer
+Triple negative breast cancer
+Clear cell renal cell carcinoma
+Endometrial cancer
+Ovarian epithelial cancer
+Breast cancer
+Bladder transitional cell carcinoma
+Head and neck cancer
+Non-small cell lung cancer
+Lung neoplasm malignant
+Metastatic renal cell carcinoma
+Transitional cell carcinoma
+Uterine cancer
+Metastatic gastric cancer
+Interstitial lung disease
+Lung squamous cell carcinoma
+PD-L1 positive cancer
+Nasal cavity cancer
+Seizure
+Colorectal adenocarcinoma
+Cancer with a high tumour mutational burden
+Rectal cancer
+Cervix carcinoma
+Oesophageal squamous cell carcinoma
+Chemotherapy
+Gastric cancer
+Bladder cancer
+Squamous cell carcinoma of lung
+Colon cancer
+Cervix carcinoma recurrent
+Lung adenocarcinoma
+Papillary renal cell carcinoma
+Metastases to lung
+Metastatic malignant melanoma
+Malignant melanoma
+Hodgkin's disease
+Squamous cell carcinoma of the cervix
+Microsatellite instability cancer
+Oesophageal carcinoma
+Ureteric cancer
+Renal cancer
+Gastric cancer recurrent
+Ear neoplasm malignant
+Transitional cell cancer of the renal pelvis and ureter
+Small cell lung cancer metastatic
+Lung cancer metastatic
+Endometrial adenocarcinoma
+Lung carcinoma cell type unspecified
+Prostate cancer
+Endometrial cancer metastatic
+Metastases to liver
+Metastases to peritoneum
+Transitional cell carcinoma recurrent
+Renal cell carcinoma recurrent
+Gingival cancer
+Oesophageal carcinoma recurrent
+BRCA1 gene mutation
+Laryngeal cancer
+Small intestine carcinoma recurrent
+Gallbladder cancer
+Neoplasm malignant
+Product used for unknown indication
+Hypopharyngeal cancer recurrent
+Oropharyngeal cancer
+Ovarian cancer
+Malignant neoplasm of renal pelvis
+Oesophageal adenocarcinoma
+Lip and/or oral cavity cancer
+Squamous cell carcinoma of head and neck
+Pharyngeal cancer
+Clear cell papillary renal cell carcinoma
+Malignant neoplasm of unknown primary site
+Non-small cell lung cancer metastatic
+Bronchial neoplasm
+Adult T-cell lymphoma/leukaemia
+Oesophageal squamous cell carcinoma recurrent
+Squamous cell carcinoma
+Rectosigmoid cancer
+Invasive ductal breast carcinoma
+Chondrosarcoma
+Transitional cell carcinoma metastatic
+Cervix cancer metastatic
+Non-small cell lung cancer stage IIIA
+Cholangiocarcinoma
+Lung neoplasm
+Bronchial carcinoma
+Epiglottic cancer
+Targeted cancer therapy
+Tongue carcinoma
+Metastatic uterine cancer
+Breast cancer recurrent
+Glioblastoma
+Oesophageal cancer metastatic
+Hypopharyngeal cancer
+Lung squamous cell carcinoma recurrent
+Lung squamous cell carcinoma metastatic
+Symptomatic treatment
+Adenosquamous cell lung cancer
+Tonsil cancer metastatic
+Metastatic squamous cell carcinoma
+Adenocarcinoma
+Adenocarcinoma of colon
+Adrenocortical carcinoma
+Metastatic neoplasm
+Lung adenocarcinoma recurrent
+Diffuse large B-cell lymphoma
+Hormone-refractory prostate cancer
+Colorectal cancer
+Skin squamous cell carcinoma recurrent
+Metastases to central nervous system
+BRAF V600E mutation positive
+Colon neoplasm
+Neoplasm
+Renal neoplasm
+Malignant melanoma of sites other than skin
+Primary mediastinal large B-cell lymphoma
+Neuroendocrine tumour of the lung
+Head and neck cancer metastatic
+Metastases to bone
+Tongue neoplasm malignant stage unspecified
+Squamous cell carcinoma of the tongue
+Squamous cell carcinoma of the oral cavity
+Colorectal cancer metastatic
+Carcinoma ex-pleomorphic adenoma
+Choroid melanoma
+Metastatic carcinoma of the bladder
+Bladder neoplasm
+Adenocarcinoma of the cervix
+Pleural mesothelioma malignant
+Metastases to lymph nodes
+Tongue cancer metastatic
+Pancreatic carcinoma metastatic
+Laryngeal squamous cell carcinoma
+Prophylaxis
+Off label use
+Squamous cell carcinoma of the vulva
+Salivary gland cancer
+K-ras gene mutation
+Porocarcinoma
+Adenoid cystic carcinoma
+Pleural mesothelioma
+Febrile neutropenia
+Ovarian clear cell carcinoma
+Sarcoma uterus
+Breast cancer metastatic
+Atrial fibrillation
+Nasal sinus cancer
+Lip neoplasm malignant stage unspecified
+HER2 positive gastric cancer
+Superficial spreading melanoma
+HER2 mutant non-small cell lung cancer
+Adenocarcinoma gastric
+Squamous cell carcinoma of the hypopharynx
+Gastrointestinal melanoma
+Neuroendocrine carcinoma
+Bladder cancer recurrent
+Rectal adenocarcinoma
+Bone cancer
+Clear cell endometrial carcinoma
+Bile duct cancer recurrent
+Renal cancer metastatic
+Chronic obstructive pulmonary disease
+Metastases to pleura
+Laryngeal cancer recurrent
+Endometrial cancer recurrent
+Myelofibrosis
+Localised melanoma
+Malignant neoplasm of thymus
+Malignant urinary tract neoplasm
+Colon cancer metastatic
+Chronic myeloid leukaemia
+Small intestine carcinoma
+Embolism
+Non-small cell lung cancer stage IIIB
+Non-clear cell renal cell carcinoma
+Pancreatic carcinoma
+Idiopathic pulmonary fibrosis
+Sarcomatoid carcinoma
+Hepatic cancer
+Hepatocellular carcinoma
+Disease progression
+Endometrial sarcoma
+Metastatic bronchial carcinoma
+Thyroid cancer
+Weight increased
+Tongue cancer recurrent
+Metastases to skin
+Prostate cancer metastatic
+Neuroendocrine carcinoma of the skin
+Breast cancer female
+Superficial spreading melanoma stage unspecified
+Squamous cell carcinoma of the vagina
+Colon cancer recurrent
+HIV test positive
+Invasive lobular breast carcinoma
+Uveal melanoma
+DNA mismatch repair protein gene mutation
+Urinary tract infection
+Malignant neoplasm progression
+Small cell lung cancer
+Adrenal mass
+Vertebral column mass
+Acral lentiginous melanoma
+Urethral cancer
+Prophylaxis of nausea and vomiting
+Hepatic cancer metastatic
+Ovarian cancer metastatic
+EGFR gene mutation
+Neuroendocrine carcinoma of the cervix
+Ovarian cancer recurrent
+Gastrointestinal stromal tumour
+Mesothelioma malignant
+Carcinoma in situ of eye
+Premedication
+Pancoast's tumour
+Pancreatic neoplasm
+Tonsil cancer
+Lung carcinoma cell type unspecified recurrent
+Breast neoplasm
+Human epidermal growth factor receptor positive
+Nasopharyngeal cancer
+Hodgkin's disease recurrent
+Osteosarcoma recurrent
+Skin squamous cell carcinoma metastatic
+Large cell lung cancer
+Proctitis
+Bladder transitional cell carcinoma metastatic
+Vaginal cancer
+Antiangiogenic therapy
+HER2 negative breast cancer
+Bladder disorder
+Small intestine carcinoma metastatic
+Perivascular epithelioid cell tumour
+Oesophageal squamous cell carcinoma metastatic
+Metastases to stomach
+Adenocarcinoma metastatic
+Adjuvant therapy
+Sarcomatoid carcinoma of the lung
+NUT gene mutation
+Laryngeal neoplasm
+Thymic carcinoma
+Non-small cell lung cancer recurrent
+Genital neoplasm malignant female
+Oropharyngeal squamous cell carcinoma
+HER2 low breast cancer
+Bladder transitional cell carcinoma recurrent
+Adenocarcinoma pancreas
+Nodular melanoma
+Anal cancer
+Vulval cancer
+Peritoneal mesothelioma malignant
+Hodgkin's disease refractory
+Tracheal cancer
+Inflammatory carcinoma of the breast
+Human epidermal growth factor receptor negative
+BRCA2 gene mutation
+Hormone receptor positive breast cancer
+Adenosquamous cell carcinoma
+Metaplastic breast carcinoma
+Lymphoma
+Melanoma recurrent
+Vaginal cancer recurrent
+Transitional cell cancer of renal pelvis and ureter metastatic
+Ureteric cancer recurrent
+Rhabdoid tumour of the kidney
+Adverse drug reaction
+Intraductal proliferative breast lesion
+Immunochemotherapy
+Rectal neoplasm
+Appendix cancer
+Type 2 diabetes mellitus
+Invasive breast carcinoma
+HER2 positive breast cancer
+Epithelioid mesothelioma
+Thymoma
+Hodgkin's disease nodular sclerosis
+Nasopharyngeal cancer metastatic
+Papillary serous endometrial carcinoma
+Oligodendroglioma
+PD-L2 positive cancer
+Bone sarcoma
+Hereditary leiomyomatosis renal cell carcinoma
+Astrocytoma
+BRAF gene mutation
+Systemic scleroderma
+Lymphadenopathy
+Metastasis
+Diabetes mellitus
+Mesothelioma
+Non-Hodgkin's lymphoma
+Gene mutation
+Squamous cell carcinoma of pharynx
+Hereditary non-polyposis colorectal cancer syndrome
+Angiosarcoma
+Rheumatoid arthritis
+Vulval cancer metastatic
+Neoadjuvant therapy
+Evidence based treatment
+Histiocytic sarcoma
+Metastases to spine
+Squamous cell carcinoma of the parotid gland
+Keratinising squamous cell carcinoma of nasopharynx
+Homologous recombination deficiency positive advanced ovarian cancer
+Dermatitis atopic
+Metastases to abdominal cavity
+Metastases to retroperitoneum
+Metastases to spleen
+Renal cancer recurrent
+Soft tissue sarcoma
+Gastric neoplasm
+Immune-mediated adrenal insufficiency
+with cancer in situ
+Arthralgia
+Ureteric cancer metastatic
+Anaplastic lymphoma kinase gene mutation
+Leiomyosarcoma
+Pleomorphic leiomyosarcoma
+Undifferentiated sarcoma
+Apocrine breast carcinoma
+Brain neoplasm malignant
+Palliative care
+Cervix neoplasm
+Atrial flutter
+Urinary tract carcinoma in situ
+Adenomyoepithelioma of breast
+B-cell lymphoma
+Malignant mediastinal neoplasm
+Glottis carcinoma
+Brain neoplasm
+Kaposi's sarcoma
+Anal squamous cell carcinoma
+Ocular melanoma
+Gastrointestinal carcinoma
+Bone marrow infiltration
+Lung infiltration
+Tissue infiltration
+Rectal cancer metastatic
+Non-renal cell carcinoma of kidney
+Cholangitis
+Peritumoural oedema
+Malignant neoplasm papilla of Vater
+Adrenal gland cancer
+Pemphigoid
+Hypothyroidism
+Brain abscess
+Bladder squamous cell carcinoma stage unspecified
+Mixed hepatocellular cholangiocarcinoma
+Nodular lymphocyte predominant Hodgkin lymphoma
+Throat cancer
+Nasopharyngeal cancer recurrent
+Brain radiation necrosis
+Astrocytoma malignant
+Cytomegalovirus viraemia
+Blood bilirubin abnormal
+Liver injury
+Pruritus
+Choriocarcinoma
+Thyroid cancer metastatic
+Malignant peritoneal neoplasm
+Acute myeloid leukaemia
+Dedifferentiated liposarcoma
+Liposarcoma recurrent
+Retroperitoneal cancer
+Squamous cell carcinoma of skin
+T-cell lymphoma recurrent
+N-ras gene mutation
+Vulval cancer recurrent
+Malignant neoplasm of ampulla of Vater
+Malignant fibrous histiocytoma
+Sarcoma metastatic
+Desmoplastic small round cell tumour
+Fallopian tube cancer
+Atypical teratoid/rhabdoid tumour of CNS
+Skin cancer
+Neuroendocrine tumour
+Metastases to heart
+Plasma cell myeloma
+Psoriatic arthropathy
+PD-L1 protein expression
+Hypopituitarism
+Oral cavity cancer metastatic
+Ovarian epithelial cancer recurrent
+Oropharyngeal cancer recurrent
+Intestinal adenocarcinoma
+Adenosquamous carcinoma of the cervix
+Pneumonitis
+Mucosal inflammation
+Autoimmune colitis
+Metastases to pelvis
+Erythema multiforme
+Anaplastic large cell lymphoma T- and null-cell types
+Neoplasm recurrence
+Transitional cell carcinoma urethra
+Adenocarcinoma gastric recurrent
+Oesophageal adenocarcinoma recurrent
+Hepatic neoplasm
+Recurrent cancer
+Skin cancer metastatic
+Eschar
+Immunotoxicity
+Malignant hydatidiform mole
+Metastases to meninges
+Cutaneous T-cell lymphoma
+Progressive multifocal leukoencephalopathy
+Huerthle cell carcinoma
+Medullary carcinoma of breast
+Neoplasm progression
+Ill-defined disorder
+Ewing's sarcoma
+Pain
+Alveolar soft part sarcoma metastatic
+Metastases to muscle
+Immunomodulatory therapy
+Malignant middle ear neoplasm
+Metastases to ovary
+Hypertension
+Pneumonia
+Metastases to adrenals
+Immune-mediated encephalitis
+Endometrial neoplasm
+Sarcoma
+Neutropenia
+Gastrooesophageal reflux disease
+Hepatoblastoma
+HER2 positive salivary gland cancer
+Toxicity to various agents
+B-cell small lymphocytic lymphoma
+Chronic lymphocytic leukaemia
+Basal cell carcinoma
+Rhabdomyosarcoma
+Primary mediastinal large B-cell lymphoma recurrent
+Pyrexia
+Chemotherapy side effect prophylaxis
+Lung cyst
+Lung opacity
+Hepatitis B
+Mediastinum neoplasm
+Metastases to kidney
+Metastatic choriocarcinoma
+Gallbladder adenocarcinoma
+Transitional cell cancer of the renal pelvis and ureter recurrent
+Rectal cancer recurrent
+Chromophobe renal cell carcinoma
+External ear neoplasm malignant
+Myopathy
+Sarcomatosis
+Adenocarcinoma of salivary gland
+Metastatic salivary gland cancer
+Xanthogranuloma
+Pericarditis malignant
+Thymic cancer metastatic
+Seizure prophylaxis
+Plasma cell myeloma refractory
+NUT midline carcinoma
+Paranasal sinus neoplasm
+Malignant glioma
+Anaplastic thyroid cancer
+Disease recurrence
+Desmoplastic melanoma
+Small cell lung cancer extensive stage
+Uterine leiomyosarcoma
+Synovial sarcoma
+Nasopharyngeal tumour
+Moraxella infection
+Malignant palate neoplasm
+Epididymal cancer
+Renal mass
+Renal vein thrombosis
+Metastases to chest wall
+Metastases to bladder
+Large cell lung cancer metastatic
+Respiratory disorder
+Gastrooesophageal reflux prophylaxis
+Glioblastoma multiforme
+Hepatobiliary cancer
+Proctitis ulcerative
+Infection prophylaxis
+Metastases to soft tissue
+Prophylaxis against gastrointestinal ulcer
+Metastases to the mediastinum
+Malignant oligodendroglioma
+COVID-19 immunisation
+Malignant dysphagia
+Alveolar soft part sarcoma
+Thrombosis prophylaxis
+Bone loss
+Abdominal wall neoplasm malignant
+Female reproductive neoplasm
+Biliary cancer metastatic
+Cancer pain
+Colitis
+Dyspepsia
+Malignant pituitary tumour
+Liver disorder

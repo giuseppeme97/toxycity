@@ -42,9 +42,13 @@ class Engine:
             "25 Social circumstances",
             "22 Surgical and medical procedures",
             "23 vascular disorders",
-            "26 Pregnancy, puerperium and perinatal conditions"
+            "26 Pregnancy, puerperium and perinatal conditions",
+            "27 Product issues"
         ]
 
+    def get_df(self):
+        return self.main_df
+    
     def get_n_rows(self):    
         return len(self.main_df)
     
@@ -61,9 +65,9 @@ class Engine:
         drugs = " - ".join(re.findall(r'\[([A-Z ,]+)\]', input_string))
         return drugs
 
-    def extract_hystology(self, input_string: str):
-        hystology = re.search(r'\(S - (.*?) - ', input_string)
-        return hystology.group(1) if hystology else None
+    def extract_hystopathology(self, input_string: str):
+        hystopatology = re.search(r'\(S - (.*?) - ', input_string)
+        return hystopatology.group(1) if hystopatology else None
 
     def extract_pts(self, input_string: str):
         pattern = r'\s*([^,(]+?)\s*\('
@@ -71,6 +75,14 @@ class Engine:
         pts = [p.strip() for p in pts]
         return pts
     
+    def check_PT_to_SOC(self, pt: str):
+        mask = self.pt_soc_df["Preferred Term"].astype(str).str.contains(pt)
+        
+        if mask.any():
+            return True
+        else:
+            return None
+
     def map_PT_to_SOC(self, pt: str):
         mask = self.pt_soc_df["Preferred Term"].astype(str).str.contains(pt)
         
@@ -97,10 +109,10 @@ class Engine:
     def run_map_drug(self):
         pass
 
-    def run_extract_hystopatology(self):
-        self.main_df["HYSTOPATHOLOGY"] = self.main_df["HYSTOPATHOLOGY"].apply(self.extract_hystology)
+    def run_extract_hystopathology(self):
+        self.main_df["HYSTOPATHOLOGY"] = self.main_df["HYSTOPATHOLOGY"].apply(self.extract_hystopathology)
 
-    def run_map_hystopatology(self):
+    def run_map_hystopathology(self):
         pass
     
     def run_merge_pts(self):
@@ -121,7 +133,6 @@ class Engine:
     def run_map_pt(self):
         for index, row in self.main_df.iterrows():
             pts = self.extract_pts(row[self.pts_column])
-            # print(f"Row {index}")
             for pt in pts:
                 soc = self.map_PT_to_SOC(pt)
                 if soc:
@@ -133,11 +144,36 @@ class Engine:
     def run_delete_PT_column(self):
         pass
 
+    def get_all_hystopathologies(self, elements):
+        hystopathologies = []
+
+        for element in elements:
+            parts = element.split(',')
+            for part in parts:
+                hystopathology = part.strip()
+                hystopathology = re.sub(r'\bstage\s+[IVXLCDM0]+\b', '', hystopathology, flags=re.IGNORECASE)
+                hystopathology = hystopathology.strip()  # ripulisce eventuali spazi rimasti
+                if hystopathology: 
+                    hystopathologies.append(hystopathology)
+
+        lista_unica = list(dict.fromkeys(hystopathologies))    
+        return lista_unica
+
+    def get_all_drugs(self, elements):
+        drugs = []
+
+        for element in elements:
+            parts = element.split(' -')
+            for part in parts:
+                drug = part.strip()
+                if drug: 
+                    drugs.append(drug)
+
+        return list(dict.fromkeys(drugs))
+
 
 if __name__ == "__main__":
-    e = Engine("./dataset/3 - Dataset 2024 (corretto + SOC zero).xlsx", "output.xlsx")
-    # print("DRUG: ", len(e.get_distinct_values("DRUG")))
-    # print("HYSTOPATHOLOGY: ", len(e.get_distinct_values("HYSTOPATHOLOGY")))
+    e = Engine("./dataset/3 - Dataset 2024 (corretto + SOC zero).xlsx", "output.xlsx")    
 
     # ---------- RESET DELLE SOC ----------- #
     # e.run_set_all_zero_SOC()
@@ -145,7 +181,7 @@ if __name__ == "__main__":
 
 
     # ---------- CATEGORIZZAZIONE DELLE PT ----------- #
-    e.run_map_pt()
+    # e.run_map_pt()
     # ------------------------------------------------ #
 
 
