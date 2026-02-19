@@ -7,13 +7,13 @@ class Engine:
         self.input_dataset = input_dataset
         self.output_dataset = output_dataset
         self.main_df = pd.read_excel(self.input_dataset)
-        self.pt_soc_df = pd.read_excel("mapping_PT2SOC.xlsx")
+        self.pt_soc_df = pd.read_excel("map_pt_to_soc.xlsx")
         self.pts_column = 'Reaction List PT (Duration - Outcome - Seriousness Criteria)'
         
-        with open('categorie_soc.json') as json_file:
+        with open('map_soc.json') as json_file:
             self.soc_categories = json.load(json_file)
         
-        with open('categorie_istopatologie.json') as json_file:
+        with open('map_hystopathologies.json') as json_file:
             self.hystopatologies_categories = json.load(json_file)
         
         self.soc_columns = [
@@ -76,7 +76,7 @@ class Engine:
         return pts
     
     def check_PT_to_SOC(self, pt: str):
-        mask = self.pt_soc_df["Preferred Term"].astype(str).str.contains(pt)
+        mask = self.pt_soc_df["Preferred Term"].astype(str).str.contains(pt, case=False, na=False)
         
         if mask.any():
             return True
@@ -84,7 +84,7 @@ class Engine:
             return None
 
     def map_PT_to_SOC(self, pt: str):
-        mask = self.pt_soc_df["Preferred Term"].astype(str).str.contains(pt)
+        mask = self.pt_soc_df["Preferred Term"].astype(str).str.contains(pt, case=False, na=False)
         
         if mask.any():
             return self.pt_soc_df.loc[mask, "System Organ Class"].iloc[0]
@@ -138,8 +138,20 @@ class Engine:
                 if soc:
                     soc_column = self.map_SOC_to_colum(soc)
                     self.main_df.loc[index, soc_column] = 1
+                    print(f"{index} - PT {pt} mappato a SOC {soc} e colonna {soc_column}.")
                 else:
                     print(f"PT {pt} non mappato.")
+
+    def run_check_pt(self):
+        orphans = []
+        for _, row in self.main_df.iterrows():
+            pts = self.extract_pts(row[self.pts_column])
+            for pt in pts:
+                soc = self.check_PT_to_SOC(pt)
+                if not soc:
+                    orphans.append(pt)
+                    print(f"PT {pt} non trovato nella mappatura.")
+        return list(set(orphans))
 
     def run_delete_PT_column(self):
         pass
@@ -173,17 +185,15 @@ class Engine:
 
 
 if __name__ == "__main__":
-    e = Engine("./dataset/3 - Dataset 2024 (corretto + SOC zero).xlsx", "output.xlsx")    
-
+    e = Engine("./dataset/3 - Dataset 2024 (corretto + SOC zero).xlsx", "output.xlsx")
+    
     # ---------- RESET DELLE SOC ----------- #
     # e.run_set_all_zero_SOC()
     # -------------------------------------- #
 
-
     # ---------- CATEGORIZZAZIONE DELLE PT ----------- #
-    # e.run_map_pt()
+    e.run_map_pt()
     # ------------------------------------------------ #
-
 
     # ---------- MERGE DELLE PT ----------- #
     # e.run_merge_pt()
@@ -194,6 +204,6 @@ if __name__ == "__main__":
     # e.run_extract_hystology()
     # ------------------------------------------------------- #
 
-    # e.save_dataset()
+    e.save_dataset()
 
     
